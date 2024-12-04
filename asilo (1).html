@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lentes para Todos</title>
+    <style>
+        /* Estilos globales */
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #181818;
+            color: #fff;
+            background-image: url('fondo5.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            min-height: 100vh;
+            position: relative; /* Para permitir la lluvia de estrellas */
+        }
+
+        h1, h2, h3 {
+            text-align: center;
+            font-weight: 300;
+        }
+
+        h1 {
+            margin-top: 60px;
+            font-size: 48px;
+            color: #f2f2f2;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.7;
+            color: #b3b3b3;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        /* Contenedor principal */
+        .main-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            max-width: 1200px;
+            margin-top: 40px;
+            padding: 0 20px;
+        }
+
+        /* Caja para la imagen y texto */
+        .content-box {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            background-color: #02147c;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgb(0, 245, 171);
+            margin-bottom: 30px;
+            width: 100%;
+            max-width: 1000px;
+            transition: transform 0.3s ease;
+        }
+
+        .content-box:hover {
+            transform: translateY(-10px);
+        }
+
+        .img-container {
+            flex-basis: 40%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .img-container img {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.555);
+        }
+
+        .text-container {
+            flex-basis: 55%;
+            padding-left: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .text-container h2 {
+            font-size: 36px;
+            color: #f2f2f2;
+            margin-bottom: 20px;
+        }
+
+        .text-container p {
+            font-size: 18px;
+            line-height: 1.8;
+            color: #c2c2c2;
+        }
+
+        .button-link {
+            display: inline-block;
+            margin-top: 20px;
+            background-color: #FF6B6B;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 30px;
+            text-decoration: none;
+            transition: background-color 0.3s, transform 0.3s;
+            align-self: flex-start;
+            font-size: 16px;
+        }
+
+        .button-link:hover {
+            background-color: #e24040ea;
+            transform: translateY(-3px);
+        }
+
+        /* Sección de fases del proyecto */
+        .phases-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            width: 100%;
+            margin-top: 30px;
+        }
+
+        .phase-section {
+            background-color: #330075;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: left;
+            width: 280px;
+            margin: 10px;
+            box-shadow: 0 10px 30px rgb(2, 119, 252);
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+            overflow: hidden;
+        }
+
+        .phase-section.expanded {
+            transform: scale(1.05);
+            box-shadow: 0 15px 40px rgba(2, 248, 228, 0.589);
+            overflow: visible;
+        }
+
+        .phase-section h3 {
+            color: #f2f2f2;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .phase-section p {
+            color: #ccc;
+            font-size: 16px;
+            line-height: 1.6;
+            max-height: 50px;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .phase-section.expanded p {
+            max-height: 100px;
+        }
+
+        .toggle-button {
+            background: transparent;
+            border: none;
+            color: #FF6B6B;
+            cursor: pointer;
+            font-size: 14px;
+            margin-top: 10px;
+            text-decoration: underline;
+        }
+
+        /* Estilos para la lluvia de estrellas */
+        .star-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            overflow: hidden;
+            z-index: 1; /* Asegura que esté detrás del contenido principal */
+        }
+
+        .star {
+            position: absolute;
+            top: -10px; /* Comienza fuera de la vista */
+            background: white;
+            border-radius: 50%;
+            opacity: 0.8;
+            animation: fall linear infinite;
+        }
+
+        @keyframes fall {
+            0% {
+                transform: translateY(0);
+                opacity: 0.8;
+            }
+            100% {
+                transform: translateY(100vh); /* Caer hasta el fondo de la pantalla */
+                opacity: 0; /* Desvanecerse al caer */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Título principal -->
+    <h1>Asilo de Personas de la Tercera Edad</h1>
+
+    <!-- Contenedor principal -->
+    <div class="main-container">
+
+        <!-- Caja de contenido principal con imagen y texto -->
+        <div class="content-box">
+            <div class="img-container">
+                <img src="asilo4.jpg" alt="Imagen de lentes">
+            </div>
+            <div class="text-container">
+                <h2>Ayudando a Quienes Más lo Necesitan</h2>
+                <p>Fomentar en los estudiantes la conciencia social y la sensibilización sobre el cuidado del adulto mayor en su comunidad.</p>
+                <a href="#" class="button-link">Conoce más</a>
+            </div>
+        </div>
+
+        <!-- Información de las fases del proyecto en columnas -->
+        <div class="phases-container">
+            <div class="phase-section" onclick="toggleExpansion(this)">
+                <h3>Fase 1: Diagnóstico (general todos los PEC)</h3>
+                <p class="extra-info">1. Banco de Activos Docentes: Evaluar el conocimiento y la aplicación de los estudiantes frente a problemas en proyectos.</p>
+                <p class="extra-info">2. Examen Diagnóstico: Crear y aplicar un examen al inicio del próximo semestre para medir conocimientos previos.</p>
+                <p class="extra-info">3. Análisis Estadístico: Revisar las respuestas en el Consejo Técnico para identificar fortalezas y áreas de oportunidad.</p>
+                <button class="toggle-button">Más información</button>
+            </div>
+
+            <div class="phase-section" onclick="toggleExpansion(this)">
+                <h3>Fase 2: Sensibilización de los Alumnos</h3>
+                <p class="extra-info">En esta fase los docentes diseñarán actividades de sensibilización para los alumnos.</p>
+                <button class="toggle-button">Más información</button>
+            </div>
+
+            <div class="phase-section" onclick="toggleExpansion(this)">
+                <h3>Fase 3: Investigación para Concientizar a los Alumnos</h3>
+                <p class="extra-info">Los alumnos crearán un video relacionado a la realidad observada en la película con la vida de sus propios abuelitos.</p>
+                <button class="toggle-button">Más información</button>
+            </div>
+
+            <div class="phase-section" onclick="toggleExpansion(this)">
+                <h3>Fase 4: Visita a las Casas de Asistencia</h3>
+                <p class="extra-info">Los alumnos visitan las casas de asistencia para crear historias de vida.</p>
+                <button class="toggle-button">Más información</button>
+            </div>
+
+            <div class="phase-section" onclick="toggleExpansion(this)">
+                <h3>Fase 5: Investigación de Insumos</h3>
+                <p class="extra-info">Investigación sobre importación y exportación de artículos para adultos mayores.</p>
+                <button class="toggle-button">Más información</button>
+            </div>
+
+            <div class="phase-section" onclick="toggleExpansion(this)">
+                <h3>Fase 6: Visita a las Casas de Asistencia</h3>
+                <p class="extra-info">Los alumnos realizan actividades dinámicas y entrega de artículos de primera necesidad.</p>
+                <button class="toggle-button">Más información</button>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="star-container"></div>
+
+    <script>
+        function verImagen(src) {
+            window.open(src, '_blank');
+        }
+
+        function createStar() {
+            const star = document.createElement('div');
+            star.classList.add('star');
+
+            // Posicionamiento aleatorio
+            star.style.left = Math.random() * 100 + 'vw'; // Ancho de la ventana
+
+            // Aumentar el tamaño aleatorio de las estrellas
+            const size = Math.random() * 5 + 3; // Tamaño entre 3 y 8 px
+            star.style.width = size + 'px';
+            star.style.height = size + 'px'; // Mantener forma circular
+
+            // Duración de la animación
+            const fallDuration = Math.random() * 3 + 2; // Entre 2 y 5 segundos
+            star.style.animationDuration = fallDuration + 's';
+
+            document.querySelector('.star-container').appendChild(star);
+
+            // Eliminar la estrella después de que haya caído
+            star.addEventListener('animationend', () => {
+                star.remove();
+            });
+        }
+
+        // Crear estrellas de manera continua
+        setInterval(createStar, 200); // Cada 200 ms
+    </script>
+
+</body>
+</html>
+

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lentes para Todos</title>
+    <style>
+        /* Estilos globales */
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #181818;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            min-height: 100vh;
+        }
+
+        h1, h2, h3 {
+            text-align: center;
+            font-weight: 300;
+        }
+
+        h1 {
+            margin-top: 60px;
+            font-size: 48px;
+            color: #f2f2f2;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.7;
+            color: #b3b3b3;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        /* Contenedor principal */
+        .main-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            max-width: 1200px;
+            margin-top: 40px;
+            padding: 0 20px;
+        }
+
+        /* Caja para la imagen y texto */
+        .content-box {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            background-color: #282828;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            margin-bottom: 30px;
+            width: 100%;
+            max-width: 1000px;
+            transition: transform 0.3s ease;
+        }
+
+        .content-box:hover {
+            transform: translateY(-10px);
+        }
+
+        .img-container {
+            flex-basis: 40%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .img-container img {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .text-container {
+            flex-basis: 55%;
+            padding-left: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .text-container h2 {
+            font-size: 36px;
+            color: #f2f2f2;
+            margin-bottom: 20px;
+        }
+
+        .text-container p {
+            font-size: 18px;
+            line-height: 1.8;
+            color: #c2c2c2;
+        }
+
+        .button-link {
+            display: inline-block;
+            margin-top: 20px;
+            background-color: #FF6B6B;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 30px;
+            text-decoration: none;
+            transition: background-color 0.3s, transform 0.3s;
+            align-self: flex-start;
+            font-size: 16px;
+        }
+
+        .button-link:hover {
+            background-color: #ff3b3b;
+            transform: translateY(-3px);
+        }
+
+        /* Sección de fases del proyecto */
+        .phase-section {
+            background-color: #333;
+            padding: 40px;
+            border-radius: 15px;
+            text-align: left;
+            max-width: 1000px;
+            width: 100%;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            margin-top: 30px;
+        }
+
+        .phase-section h3 {
+            color: #f2f2f2;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .phase-section p {
+            color: #ccc;
+            font-size: 18px;
+            line-height: 1.8;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Título principal -->
+    <h1>Lentes para Todos</h1>
+
+    <!-- Contenedor principal -->
+    <div class="main-container">
+
+        <!-- Caja de contenido principal con imagen y texto -->
+        <div class="content-box">
+            <div class="img-container">
+                <img src="https://via.placeholder.com/400" alt="Imagen de lentes">
+            </div>
+            <div class="text-container">
+                <h2>Ayudando a quienes más lo necesitan</h2>
+                <p>Este proyecto tiene como meta recolectar fondos y recursos para ayudar a las personas que están enfrentando el cáncer, brindándoles apoyo en el costo de medicamentos y tratamientos.</p>
+                <a href="#" class="button-link">Conoce más</a>
+            </div>
+        </div>
+
+        <!-- Información de las fases del proyecto -->
+        <div class="phase-section">
+            <h3>Fase 1: Diagnóstico (general todos los PEC)</h3>
+            <p>Resumen del Diagnóstico General
+
+1. Banco de Activos Docentes: Evaluar el conocimiento y la aplicación de los estudiantes frente a problemas en proyectos.
+
+2. Examen Diagnóstico: Crear y aplicar un examen al inicio del próximo semestre para medir conocimientos previos.
+
+3. Análisis Estadístico: Revisar las respuestas en el Consejo Técnico para identificar fortalezas y áreas de oportunidad.
+
+Este proceso busca mejorar las estrategias educativas según las necesidades de los alumnos.</p>
+        </div>
+
+        <div class="phase-section">
+            <h3>Fase 2: Recolección de fondos</h3>
+            <p>Organizamos eventos de recaudación y buscamos alianzas con empresas para financiar el proyecto.</p>
+        </div>
+
+        <div class="phase-section">
+            <h3>Fase 3: Distribución de recursos</h3>
+            <p>Se comienzan a distribuir medicamentos, tratamientos y otros recursos a las personas que lo necesitan.</p>
+        </div>
+
+        <div class="phase-section">
+            <h3>Fase 4: la visita a las casa de asistencia</h3>
+            <p>1 los alumnos visitan las casas de asistencia para crear historias de vida, osea entrevista con adultos mayores 
+                2 los alumnos visitan las casas de asistencia para crear cartas al pasado, ya sea de un familiar fallecido o que no hayan visto despues de mucho tiempo
+                3 los alumnos visitan los acilos para que les leean libros o historias de los adultos mayores y ayudarlos a elaborar un presente (actividad manual)
+            </p>
+        </div>
+
+        <div class="phase-section">
+            <h3>Fase 5: Investigacion de insumos</h3>
+            <p>1.Investigacion de linea de procesos de articulos para adulto mayore.
+                2.Investigacion sobre importacion y exortacion de articulos para adulto mayor.
+                3.Los alumnos investigan y descubren un problema,fenomeno o situacion lentate del adulto mayor para concluir con medidas de tendencia central.
+            </p>
+        </div>
+
+        <div class="phase-section">
+            <h3>Fase 6: Visita a las casas de asistencia</h3>
+            <p>1.Los alumnos  visitan las casas de asistencia para realizar  actividades dinamicas y entrega de articulos de primera necesidad.
+                2.Los alumnos presentan villancicos y posada.
+            </p>
+        </div>
+
+    </div>
+
+</body>
+</html>

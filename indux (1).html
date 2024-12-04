@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina Principal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        header {
+            background-color: #333;
+            padding: 20px;
+            text-align: center;
+        }
+nav {
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 18px;
+            transition: color 0.3s ease, transform 0.3s ease;
+            position: relative;
+            display: flex;
+            align-items: center;
+            padding: 10px 15px;
+            border-radius: 8px;
+        }
+
+        nav ul li a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            color: #18bc9c;
+            transform: scale(1.1);
+        }
+
+        nav ul li a img {
+            width: 24px;
+            height: 24px;
+            vertical-align: middle;
+            margin-right: 8px;
+            border-radius: 50%;
+        }
+
+        .boton {
+            color: #fff;
+            background-color: #4CAF50;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .boton:hover {
+            background-color: #3e8e41;
+        }
+
+        main {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            height: calc(100vh - 80px); /* Subtract header height */
+        }
+
+        .section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            font-size: 24px;
+            position: relative;
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* Fondo de cada secciýýn */
+        .section:nth-child(1) {
+            background-image: url('Lentes1.jpg');
+        }
+
+        .section:nth-child(2) {
+            background-image: url('tapitas2.jpg');
+        }
+
+        .section:nth-child(3) {
+            background-image: url('zoologico4.jpg');
+        }
+
+        .section:nth-child(4) {
+            background-image: url('asilo5.jpg');
+        }
+
+        h1 {
+            color: #070707;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            color: #000000;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="lentes.html"><img src="lentes.jpg" alt="Lentes Logo">Lentes para todos</a></li>
+                <li><a href="tapitasss.html"><img src="luis1.jpg" alt="Tapitas Logo">Tapitas</a></li>
+                <li><a href="zoologico.html"><img src="zooo.jpg" alt="Zoologico Logo">Zoologico</a></li>
+                <li><a href="asilo.html"><img src="asilo.jpg" alt="Asilo Logo">Asilo de personas de la tercera edad</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="section">
+            <h1>para ayudar a los alumnos con mala vista </h1>
+        </div>
+        <div class="section">
+            <h1>sobre el proyecto tapitas </h1>
+        </div>
+        <div class="section">
+            <h1>sobre el proyecto zool?gico </h1>
+        </div>
+        <div class="section">
+            <h1>para convivir con las personas de la tercera edad, y darles compa??a </h1>
+        </div>
+    </main>
+    <script>
+        // Agregar efecto de transicion al men?
+        const botones = document.querySelectorAll('.boton');
+
+        botones.forEach(boton => {
+            boton.addEventListener('mouseover', () => {
+                boton.style.transform = 'scale(1.1)';
+            });
+            boton.addEventListener('mouseout', () => {
+                boton.style.transform = 'scale(1)';
+            });
+        });
+    </script>
+</body>
+</html>
+

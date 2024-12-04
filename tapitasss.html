@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto Tapitas</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #121212;
+            color: #f5f5f5;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            overflow-x: hidden; /* Evitar scroll horizontal */
+        }
+        header {
+            background: linear-gradient(to right, #ff6f00, #ffcc00);
+            color: white;
+            text-align: center;
+            padding: 1.5em 1em;
+            width: 100%;
+        }
+        header h1 {
+            font-size: 2.5rem; /* Tamaño relativo */
+            margin: 0;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+        }
+        .sections-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+            padding: 1rem;
+            width: 100%;
+        }
+        .section {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+            width: calc(100% - 2rem); /* Adaptable al ancho del contenedor */
+            max-width: 300px; /* Ancho máximo */
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-align: center; /* Centrar contenido */
+        }
+        .section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.8);
+        }
+        h2 {
+            color: #ffcc00;
+            font-size: 1.8rem; /* Ajuste proporcional */
+            margin-bottom: 1rem;
+        }
+        p {
+            line-height: 1.6;
+            opacity: 0.85;
+            font-size: 1rem; /* Tamaño más legible */
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 15px;
+            margin: 1rem 0;
+        }
+        /* Ajustes para dispositivos más pequeños */
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 2rem; /* Reducir el tamaño del título */
+            }
+            .section {
+                padding: 1.5rem;
+                max-width: 90%; /* Asegurar que no se salga en pantallas pequeñas */
+            }
+            h2 {
+                font-size: 1.5rem;
+            }
+            p {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Proyecto Tapitas</h1>
+    </header>
+    <div class="sections-container">
+        <div class="section">
+            <h2>¿De qué trata el proyecto?</h2>
+            <p>El Proyecto Tapitas se dedica a recolectar tapitas de plástico para ayudar a financiar tratamientos para niños y adultos con cáncer. Cada tapita cuenta, y con tu ayuda podemos hacer una gran diferencia.</p>
+        </div>
+        <div class="section">
+            <h2>Maestros Involucrados</h2>
+            <p>Los maestros que participan en este proyecto son apasionados por la educación y la solidaridad. Están comprometidos a enseñar a los estudiantes la importancia de ayudar a los demás.</p>
+        </div>
+        <div class="section">
+            <h2>Fase 1: Diagnóstico</h2>
+            <p>En esta fase se realiza un diagnóstico general sobre las múltiples actividades que se pretenden realizar, con el fin de encontrar las fortalezas y áreas de oportunidad de nuestros estudiantes.</p>
+        </div>
+        <div class="section">
+            <h2>Fase 2: Construcción de las fases del proyecto</h2>
+            <p>Los proyectos en los que están interesados en participar deberán relacionar su UAC que impacta el proyecto y las actividades particulares con que cada uno de los docentes participará.</p>
+        </div>
+        <div class="section">
+            <h2>Fase 3: Proyección de actividades</h2>
+            <p>Las personas encargadas de cada proyecto construirán el esquema general de fases que tendrá cada proyecto, documento que dejarán en la carpeta con su título.</p>
+        </div>
+        <div class="section">
+            <h2>Imágenes del Proyecto</h2>
+            <img src="tapitas2.jpg" alt="Imagen del Proyecto 1">
+            <img src="tapass.jpg" alt="Imagen del Proyecto 2">
+            <img src="tapitas.jpg" alt="Imagen del Proyecto 3">
+        </div>
+    </div>
+</body>
+</html>
+
